@@ -51,6 +51,10 @@
             margin: 4px 2px;
             cursor: pointer;
         }
+        .dark-mode {
+        background-color: #333;
+        color: #fff;
+        }
     </style>
     <script>
         function changeBackgroundColor() {
@@ -58,21 +62,14 @@
             const randomColor = colors[Math.floor(Math.random() * colors.length)];
             document.body.style.backgroundColor = randomColor; 
         }
-        function displayWelcomeMessage() {
-			    const name = prompt("What's your name?");
-			    if (name) {
-			        alert(`Welcome to my homepage, ${name}!`);
-			    }
-			}
-            window.onload = function() {
-			    displayWelcomeMessage();
-			};
-			
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
     </script>
 </head>
 <body>
     <button onclick="changeBackgroundColor()">Change Background Color</button>
-    <button onclick="///">///</button>
+    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
     <h1>This page is dedicated to why I love Popeyes chicken sandwhiches</h1>
     <p>Popeyes chicken sandwiches are somewhat of a delicacy to me.</p>
     <img src="/man_eating_popeyes.jpg" alt="Web Image" width="500" height="300">
