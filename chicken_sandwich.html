@@ -39,9 +39,36 @@
             padding: 50px;
             margin: 20px;
         }
+        .button {
+            background-color: #04AA6D;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
     </style>
+    <script>
+        function changeBackgroundColor() {
+            const colors = ['#ff9999', '#99ff99', '#9999ff', '#ffff99'];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            document.body.style.backgroundColor = randomColor; 
+        }
+        function displayWelcomeMessage() {
+			    const name = prompt("What's your name?");
+			    if (name) {
+			        alert(`Welcome to my homepage, ${name}!`);
+			    }
+			}
+    </script>
 </head>
 <body>
+    <button onclick="changeBackgroundColor()">Change Background Color</button>
+    <button onclick="///">///</button>
     <h1>This page is dedicated to why I love Popeyes chicken sandwhiches</h1>
     <p>Popeyes chicken sandwiches are somewhat of a delicacy to me.</p>
     <img src="/man_eating_popeyes.jpg" alt="Web Image" width="500" height="300">
